@@ -2359,6 +2359,11 @@ blockquote {
   display: flex;
 }
 
+
+.header-center a:hover::after {
+  width: 100%;
+}
+
 .logo-link.logo-fix, .logo-link.logo-fix.w--current {
   position: absolute;
   inset: 2.5em auto auto -2.5em;
@@ -2370,7 +2375,7 @@ blockquote {
   height: 3.31em;
 }
 
-.nav-link {
+/* .nav-link {
   color: var(--_style---white);
   font-size: 1.13em;
   font-weight: 400;
@@ -2382,6 +2387,28 @@ blockquote {
 .nav-link:hover {
   font-weight: 400;
   transform: scale(.95);
+} */
+
+
+.header-center a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 5px 0;
+}
+.header-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.header-center a:hover::after {
+  width: 100%;
 }
 
 .head-button {
